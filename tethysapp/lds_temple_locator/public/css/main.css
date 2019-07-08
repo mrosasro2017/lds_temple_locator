@@ -1,0 +1,19 @@
+#obsgraph {
+    height: 100%;
+}
+
+.obslogos {
+    width: 40%;
+    padding: 0 5px 0 5px;
+}
+
+#obsgraph .modal-dialog {
+  width: 75%;
+  height: 75%;
+  padding: 0;
+}
+
+#obsgraph .modal-body {
+  height: 100%;
+  border-radius: 0;
+}

@@ -1,0 +1,62 @@
+{% extends "lds_temple_locator/base.html" %}
+{% load tethys_gizmos %}
+{% load staticfiles %}
+
+{% block header_buttons %}
+  <div class="header-button glyphicon-button" data-toggle="tooltip" data-placement="bottom" title="Help">
+    <a data-toggle="modal" data-target="#help-modal"><span class="glyphicon glyphicon-question-sign"></span></a>
+  </div>
+{% endblock %}
+
+{% block app_content %}
+  <h1>Welcome to the LDS Temple Locator App!</h1>
+  <p class="author"><b>Author:</b> Anthony Rosas Rodriguez</p>
+  <p class="project">This App is part of the final project for the 514-Geospatial Software Development class at Brigham Young University.</p>
+  <div id=image align="center"><img src="{% static 'lds_temple_locator/images/LDS_Temple_Map.png' %}" width="600" height="377"></div>
+  <br>
+  <div id=text align="center"><span class="caption">LDS Temples</span></div>
+  <br><br>
+  <p>The <a href="https://www.churchofjesuschrist.org" target="_blank">LDS</a> Temples are special places for LDS members because they are
+    places dedicated to worship the Lord. They are places built with the most precious materials and maintained in that pristine state every day.
+    LDS People believe that in the temples they can perform ordinances for their already deceased relatives. That is one of the reasons why LDS
+    people are so centered in families and in doing family history work. Personally I would love to be able to visit every temple in the globe someday. For that reason I am
+    always looking opportunities to find temples in the places I visit.</p>
+  <p> For that reason a way to find temples by location(by state/ by country) with specific details should be really useful.</p>
+{% endblock %}
+
+{# Use the after_app_content block for modals #}
+{% block after_app_content %}
+    <!-- Help Modal -->
+    <div class="modal fade" id="help-modal" tabindex="-1" role="dialog" aria-labelledby="help-modal-label">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h1 class="modal-title" id="help-modal-label">Instructions</h1>
+          </div>
+          <div class="modal-body">
+            <h2>Country Locator</h2>
+            <ul>
+              <li>Click the "Select Country" dropdown and select the country of interest. The map will display the country's temples.</li>
+            </ul>
+            <h2>State Locator</h2>
+            <ul>
+              <li>Click the "Select State" dropdown and select the desired state in the USA. The map will display the state's temples.</li>
+            </ul>
+            <h2>Click on individual temple</h2>
+            <ul>
+              <li>When clicked, each station will display pictures and temple metadata.</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+{% block app_actions %}
+
+{% endblock %}
